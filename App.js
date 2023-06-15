@@ -15,7 +15,7 @@ export default function App() {
 
   const [todos, setTodos] = useState([
     { title: 'Ta sommarlov', description: 'Gå ut i solen', isDone: false },
-    { title: 'Gör klart app', description: 'Skriv kod', isDone: false },
+    { title: 'Gör klart app', description: 'Skriv kod', isDone: true },
     { title: 'Börja med app', description: 'Starta expo projekt', isDone: true },
   ])
 
