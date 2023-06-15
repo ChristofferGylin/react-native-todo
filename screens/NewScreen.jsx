@@ -1,17 +1,14 @@
-import { Button, Text, TextInput, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { Button, TextInput, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import styles from '../styles';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import uuid from 'react-native-uuid';
 
 
-const NewScreen = ({ routes, navigation, todos, setTodos }) => {
+const NewScreen = ({ navigation, todos, setTodos }) => {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-
-    const titleRef = useRef(null);
-    const descRef = useRef(null);
 
     const handleSubmit = () => {
         const id = uuid.v4();
@@ -45,7 +42,6 @@ const NewScreen = ({ routes, navigation, todos, setTodos }) => {
                     onChangeText={text => setTitle(text)}
                     value={title}
                     placeholder='Title'
-                    ref={titleRef}
                 />
                 <TextInput
                     multiline
@@ -56,15 +52,10 @@ const NewScreen = ({ routes, navigation, todos, setTodos }) => {
                     }}
                     value={description}
                     placeholder='Description'
-                    ref={descRef}
                 />
-
-
-
                 <StatusBar style="auto" />
             </View>
         </TouchableWithoutFeedback>
-
     );
 }
 

@@ -4,7 +4,7 @@ import styles from '../styles';
 import { useEffect, useState } from 'react';
 import Todo from '../components/Todo';
 
-const HomeScreen = ({ navigation, routes, todos }) => {
+const HomeScreen = ({ navigation, todos }) => {
 
     const [dos, setDos] = useState([]);
     const [dones, setDones] = useState([]);
